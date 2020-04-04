@@ -2,8 +2,9 @@ FROM gitpod/workspace-full
                     
 USER gitpod
 
-ENV DENO_INSALL /workspace/.cache
-RUN env > aaa.txt
+ENV DENO_INSALL /workspace/bin
+RUN curl -fsSL https://deno.land/x/install/install.sh
+
 
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
