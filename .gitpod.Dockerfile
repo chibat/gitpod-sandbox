@@ -2,6 +2,7 @@ FROM gitpod/workspace-full
                     
 USER gitpod
 
+ENV DENO_INSALL /workspace/.cache
 RUN env > aaa.txt
 
 # Install custom tools, runtime, etc. using apt-get
