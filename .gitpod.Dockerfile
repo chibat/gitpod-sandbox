@@ -2,7 +2,7 @@ FROM gitpod/workspace-full
                     
 USER gitpod
 
-ENV DENO_INSTALL /workspace/bin
+ENV DENO_INSTALL /home/gitpod/workspace/bin
 RUN curl -fsSL https://deno.land/x/install/install.sh
 
 
