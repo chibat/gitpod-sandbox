@@ -3,7 +3,7 @@ FROM gitpod/workspace-full
 USER gitpod
 
 ENV DENO_INSTALL /home/gitpod/workspace/bin
-RUN sudo apt-get install neovim
+RUN apt-get install neovim
 
 
 # Install custom tools, runtime, etc. using apt-get
