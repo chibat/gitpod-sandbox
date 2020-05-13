@@ -4,6 +4,7 @@ FROM gitpod/workspace-full
 
 ENV DENO_INSTALL /home/gitpod/workspace/bin
 RUN sudo apt-get -q update && sudo apt-get -yq install neovim
+RUN sudo ln -s /usr/bin/nvim /usr/local/bin/nvim
 
 
 # Install custom tools, runtime, etc. using apt-get
