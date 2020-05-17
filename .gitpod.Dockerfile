@@ -2,9 +2,13 @@ FROM gitpod/workspace-full
                     
 # USER gitpod
 
-ENV DENO_INSTALL /home/gitpod/workspace/bin
-RUN sudo apt-get -q update && sudo apt-get -yq install neovim
-RUN sudo ln -s /usr/bin/nvim /usr/local/bin/nvim
+ENV DENO_DIR=/workspace/.deno
+ENV DENO_INSTALL=$HOME/.deno
+ENV PATH=$DENO_INSTALL/bin:$PATH
+RUN curl -fsSL https://deno.land/x/install/install.sh | sh
+
+RUN npm install @openapitools/openapi-generator-cli -g
+
 
 
 # Install custom tools, runtime, etc. using apt-get
