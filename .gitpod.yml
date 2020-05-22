@@ -3,3 +3,6 @@ tasks:
     command: set -o vi
 image:
   file: .gitpod.Dockerfile
+vscode:
+  extensions:
+    - axetroy.vscode-deno@3.7.0:YlA2jgY/k6sHhu6khQB+gw==
