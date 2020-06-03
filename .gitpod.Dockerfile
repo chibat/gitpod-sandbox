@@ -10,8 +10,8 @@ RUN curl -fsSL https://deno.land/x/install/install.sh | sh
 RUN npm install @openapitools/openapi-generator-cli -g
 
 # neovim
-RUN cd && curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
-ENV PATH=/workspace/squashfs-root/usr/bin:$PATH
+RUN cd && curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage && chmod u+x nvim.appimage && ./nvim.appimage --appimage-extract
+ENV PATH=$HOME/squashfs-root/usr/bin:$PATH
 
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
