@@ -10,7 +10,7 @@ RUN curl -fsSL https://deno.land/x/install/install.sh | sh
 RUN npm install @openapitools/openapi-generator-cli -g
 
 # neovim
-RUN cd /workspace && curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+RUN cd && curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 ENV PATH=/workspace/squashfs-root/usr/bin:$PATH
 
 # Install custom tools, runtime, etc. using apt-get
