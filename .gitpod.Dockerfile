@@ -20,7 +20,8 @@ RUN mkdir -p ~/.vim/pack/coc/start && \
     curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz|tar xzfv - && \
     mkdir -p ~/.config/coc/extensions && \
     cd ~/.config/coc/extensions && \
-    npm install coc-tsserver --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+    echo '{"dependencies":{}}' > package.json \
+    npm install coc-tsserver coc-deno
 
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
