@@ -1,5 +1,5 @@
 // .vscode/settings.json
 {
     "deno.enable": true,
-    "vscode-neovim.neovimPath": "/home/gitpod/squashfs-root/usr/bin/nvim"
+    // "vscode-neovim.neovimPath": "/home/gitpod/squashfs-root/usr/bin/nvim"
 }

@@ -13,6 +13,15 @@ RUN npm install @openapitools/openapi-generator-cli -g
 RUN cd && curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage && chmod u+x nvim.appimage && ./nvim.appimage --appimage-extract
 ENV PATH=$HOME/squashfs-root/usr/bin:$PATH
 
+# coc.nvim
+# https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
+RUN mkdir -p ~/.vim/pack/coc/start && \
+    cd ~/.vim/pack/coc/start && \
+    curl --fail -L https://github.com/neoclide/coc.nvim/archive/release.tar.gz|tar xzfv - && \
+    mkdir -p ~/.config/coc/extensions && \
+    cd ~/.config/coc/extensions && \
+    npm install coc-tsserver --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
 #
