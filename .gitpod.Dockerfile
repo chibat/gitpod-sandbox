@@ -7,11 +7,12 @@ ENV DENO_INSTALL=$HOME/.deno
 ENV PATH=$DENO_INSTALL/bin:$PATH
 RUN curl -fsSL https://deno.land/x/install/install.sh | sh
 
-RUN npm install @openapitools/openapi-generator-cli -g
+# openapi-generator
+#RUN npm install @openapitools/openapi-generator-cli -g
 
 # neovim
-RUN cd && curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage && chmod u+x nvim.appimage && ./nvim.appimage --appimage-extract
-ENV PATH=$HOME/squashfs-root/usr/bin:$PATH
+#RUN cd && curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage && chmod u+x nvim.appimage && ./nvim.appimage --appimage-extract
+#ENV PATH=$HOME/squashfs-root/usr/bin:$PATH
 
 # coc.nvim
 # https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
